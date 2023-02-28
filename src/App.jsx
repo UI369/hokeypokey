@@ -5,6 +5,6 @@ import "./App.css";
 export default function HokeyPokey() {
 
   return <div className="App">
-    <PokeLoader num="25"></PokeLoader>
+    <PokeLoader count="25"></PokeLoader>
   </div>
 }
