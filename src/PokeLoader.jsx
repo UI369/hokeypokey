@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 
-export function PokeLoader({ num }) {
+export function PokeLoader({ count }) {
   const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
-
+  const [num, setNum] = useState(count);
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon/?limit=num&offset=0")
+    fetch("https://pokeapi.co/api/v2/pokemon/?limit=" + num + "&offset=0")
       .then((res) => res.json())
       .then(
         (result) => {
@@ -32,13 +32,13 @@ export function PokeLoader({ num }) {
 function PokeList({ pokes }) {
   return pokes?.map((poke, ndx) => {
     //console.log(poke);
-    return <Pokemon key={poke.url} name={poke.name} num={ndx} />;
+    return <Pokemon key={poke.url} name={poke.name} num={ndx + 1} />;
   });
 }
 
 function Pokemon({ name, num }) {
   return (
-    <div>
+    <div className="pokemon">
       Pokemon #{num}: {capitalizeFirstLetter(name)}
     </div>
   );

@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.pokemon {
+  background: rgb(5, 65, 65);
+  border: 1px solid #999;
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 34px;
+  height: 100px;
+  margin-right: 5px;
+  margin-top: 5px;
+  padding: 5px;
+  text-align: left;
+  width: 250px;
+}
