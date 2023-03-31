@@ -37,9 +37,15 @@ function PokeList({ pokes }) {
 }
 
 function Pokemon({ name, num }) {
+  //< img src="img_avatar.png" alt="Avatar" style="width:100%" />
   return (
-    <div className="pokemon">
-      Pokemon #{num}: {capitalizeFirstLetter(name)}
+    <div className="card">
+      <div className="cardContainer">
+        <h4>
+          <b>Pokemon #{num}</b>
+        </h4>
+        <p>{capitalizeFirstLetter(name)}</p>
+      </div>
     </div>
   );
 
